@@ -1,0 +1,303 @@
+/* CSS Document */
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+}
+
+button:not([disabled]) {
+    cursor: pointer;
+}
+
+.background{
+    width:1450px;
+    position: absolute;
+    top: 0px;
+    z-index: 0;
+}
+
+/* Basics */
+
+h1 {
+    color: #FBEED5;
+}
+
+p{
+    position: relative;
+    z-index:1;
+    bottom: -300px;
+    color: #FBEED5;
+}
+
+/* Kleurtjes */
+:root {
+    --licht-blauw: #489DCB;
+    --donker-blauw: #1E415E;
+    --lichter-zwart: #291C27;
+    --donker-zwart: #1A0C1B;
+    --licht-beige: #FBEED5;
+    --donker-beige: #C6B8A7;
+    --licht-rood: #C0283E;
+    --donker-rood: #A8233A;
+}
+
+/* Achtergrond */
+
+*:before,
+*:after {
+    content: "";
+    position: absolute;
+}
+
+.skyscrapers{
+    position: absolute;
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    bottom: -53px;
+    left: -26px;
+    list-style-type: none;
+    transform: rotate(-0.7deg);
+}
+
+/* Alle skyscrapers zijn knoppen */
+button{
+    background-color:rgba(0,0,0,0.0);
+    border: none;
+}
+
+
+/* eerste skyscraper */
+
+.skyscraper1 {
+    height: 350px;
+    position: relative;
+    width:140px;
+    background-color: var(--donker-zwart);
+}
+
+/* ik heb before gebruikt zodat ik niet een extra divje aan hoefde te maken */
+.skyscraper1:before {
+    border-top: 30px solid transparent;
+    border-bottom: none;
+    border-right: 90px solid var(--donker-zwart);
+    height: 60px;
+    top: -60px;
+    left: 15px;
+}
+
+/* tweede skyscraper */
+
+.skyscraper2 {
+    background-color: var(--donker-zwart);
+    width: 100px;
+    height: 450px;
+    position: relative;
+}
+
+.skyscraper2:before {
+    width: 4px;
+    height: 48px;
+    background-color: var(--donker-zwart);
+    top: -48px;
+    left: 15px;
+}
+
+
+/* derde skyscraper */
+
+.skyscraper3 {
+    background-color: var(--donker-zwart);
+    width: 140px;
+    height: 480px;
+    position: relative;
+}
+
+.skyscraper3:before {
+    width: 16px;
+    height: 8px;
+    background-color: var(--donker-zwart);
+    top: -8px;
+}
+
+/* vierde skyscraper */
+
+.skyscraper4 {
+    background-color: var(--donker-zwart);
+    width: 94px;
+    height: 350px;
+    position: relative;
+}
+
+
+/* vijfde skyscraper */
+
+.skyscraper5 {
+    background-color: var(--donker-zwart);
+    width: 94px;
+    height: 422px;
+    position: relative;
+}
+
+.skyscraper5:before {
+    width: 12px;
+    height: 4px;
+    background-color: var(--donker-zwart);
+    top: -4px;
+    right: 10px;
+}
+
+/* zesde skyscraper */
+
+.skyscraper6 {
+    background-color: var(--donker-zwart);
+    width: 140px;
+    height: 378px;
+    position: relative;
+}
+
+.skyscraper6:before {
+    width: 10px;
+    height: 22px;
+    background-color:var(--donker-zwart);
+    top: -16px;
+    right: 12px;
+}
+
+/* zevende skyscraper */
+
+.skyscraper7 {
+    background-color: var(--donker-zwart);
+    width: 94px;
+    height: 422px;
+    position: relative;
+}
+
+.skyscraper7:before {
+    width: 12px;
+    height: 4px;
+    background-color: var(--donker-zwart);
+    top: -4px;
+    right: 10px;
+}
+
+/* achtste skyscraper */
+
+.skyscraper8 {
+    background-color: var(--donker-zwart);
+    width: 140px;
+    height: 480px;
+    position: relative;
+}
+
+.skyscraper8:before {
+    width: 16px;
+    height: 8px;
+    background-color: var(--donker-zwart);
+    top: -8px;
+}
+
+/* dit is voor de lampjes */
+
+.lamp {
+    position: absolute;
+    bottom: 20px;
+    width: 4px;
+    height: 122px;
+    background-color: var(--licht-beige);
+    cursor: pointer;
+    z-index: 2;
+    transform: rotate(-0.6deg);
+    bottom: -40px;
+}
+
+.lamp:before {
+    width: 8px;
+    height: 25px;
+    background-color: var(--donker-beige);
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    bottom: 0;
+    left: -2px;
+}
+
+.lamp:after {
+    width: 13px;
+    height: 15px;
+    background-color: var(--donker-beige);
+    border-radius: 50%;
+    left: -4px;
+    top: -10px;
+}
+
+.lamp-glow {
+    position: absolute;
+    z-index: 2;
+    width: 13px;
+    height: 15px;
+    top: -10px;
+    left: -4px;
+    border-radius: 50%;
+    background-color: #fff;
+    box-shadow: 0 0 65px 40px #fff;
+    opacity: 0;
+}
+
+/* dit snap ik nog niet, maar de tutorial was leuk */
+.lamp:hover > .lamp-glow {
+    opacity: 1;
+}
+
+#lamp1 {
+    left: 400px;
+}
+
+#lamp2 {
+    left: 600px;
+}
+
+#lamp3 {
+    left: 800px;
+}
+
+#lamp4 {
+    left: 1000px;
+}
+
+
+/* hier staat Spiderman! */
+
+.spideybasic {
+    position: relative;
+    z-index: 4;
+    width: 12%;
+}
+
+
+img:nth-of-type(1):hover {
+  animation-name: spideybasic;
+  animation-duration: 3s;
+}
+
+@keyframes spideybasic {
+  0% {
+    transform:  translatex(0%);
+  }
+
+  50% {
+    transform: translatex(50%);
+  }
+
+  100% {
+    transform: translatex(100%);
+
+  }
+}
