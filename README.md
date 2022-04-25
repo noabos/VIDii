@@ -14,9 +14,11 @@ Mijn startniveau is: Blauw
 
 <details open>
   <summary>De eerste versie/schets van je ontwerp & je persoonlijke uitdaging</summary>
+  <img src="readme-images/conceptidee.png" width="375px" alt="eerste versie/schets">
 
   ### De eerste versie/schets:
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="eerste versie/schets">
+  <img src="readme-images/" width="375px" alt="eerste versie/schets">
+   <img src="readme-images/conceptidee.png" width="375px" alt="eerste versie/schets">
 
 
   ### Je ambitie: 
