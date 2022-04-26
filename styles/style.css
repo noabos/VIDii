@@ -1,7 +1,16 @@
 /* CSS Document */
-*,
-*::after,
-*::before {
+
+/********************************************************************/
+/*                       BASICS                                      */
+/********************************************************************/
+*
+{ box-sizing: border-box;
+}
+
+*:before,
+*:after {
+    content: "";
+    position: absolute;
     box-sizing: border-box;
 }
 
@@ -11,21 +20,38 @@ body {
     margin: 0;
 }
 
+body{
+    background-image: url('../images/background.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    position: relative;
+
+}
+
 button:not([disabled]) {
     cursor: pointer;
 }
 
-.background{
-    width:1450px;
-    position: absolute;
-    top: 0px;
-    z-index: 0;
-}
+/****************/
+/*  BASICS2.0   */
+/****************/
 
-/* Basics */
 
 h1 {
     color: #FBEED5;
+    z-index: 2;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+    top:150px;
+    font-family: 'CustomFont',
+    Arial,
+    sans-serif;
+    font-weight:normal;
+    font-style:normal;
 }
 
 p{
@@ -35,26 +61,24 @@ p{
     color: #FBEED5;
 }
 
-/* Kleurtjes */
+/****************/
+/*    COLORS    */
+/****************/
+
 :root {
     --licht-blauw: #489DCB;
     --donker-blauw: #1E415E;
     --lichter-zwart: #291C27;
-    --donker-zwart: #1A0C1B;
+    --donker-zwart: #272727;
     --licht-beige: #FBEED5;
     --donker-beige: #C6B8A7;
     --licht-rood: #C0283E;
     --donker-rood: #A8233A;
 }
 
-/* Achtergrond */
-
-*:before,
-*:after {
-    content: "";
-    position: absolute;
-}
-
+/********************************************************************/
+/*                       CITY                                       */
+/********************************************************************/
 .skyscrapers{
     position: absolute;
     bottom: -60px;
@@ -66,7 +90,6 @@ p{
     justify-content: center;
     list-style-type: none;
     transform: rotate(-0.7deg);
-
 }
 
 li {
@@ -81,12 +104,17 @@ button{
     border: none;
     padding-left: 1vw;
     color: var(--donker-beige);
-
+    width:100%;
+    background-image: url('../images/defaultstate.png');
 }
 
+button:focus {
+ background-image: url('../images/focusstate.png');
+}
 
-/* eerste skyscraper */
-
+/****************/
+/*  SKYSCRAPER1 */
+/****************/
 .skyscraper1 {
     height: 350px;
     position: relative;
@@ -94,18 +122,9 @@ button{
     background-color: var(--donker-zwart);
 }
 
-/* ik heb before gebruikt zodat ik niet een extra divje aan hoefde te maken */
-.skyscraper1:before {
-    border-top: 30px solid transparent;
-    border-bottom: none;
-    border-right: 90px solid var(--donker-zwart);
-    height: 60px;
-    top: -60px;
-    left: 15px;
-}
-
-/* tweede skyscraper */
-
+/****************/
+/*  SKYSCRAPER2 */
+/****************/
 .skyscraper2 {
     background-color: var(--donker-zwart);
     width: 100px;
@@ -122,8 +141,9 @@ button{
 }
 
 
-/* derde skyscraper */
-
+/****************/
+/*  SKYSCRAPER3 */
+/****************/
 .skyscraper3 {
     background-color: var(--donker-zwart);
     width: 140px;
@@ -138,8 +158,9 @@ button{
     top: -8px;
 }
 
-/* vierde skyscraper */
-
+/****************/
+/*  SKYSCRAPER4 */
+/****************/
 .skyscraper4 {
     background-color: var(--donker-zwart);
     width: 94px;
@@ -148,8 +169,9 @@ button{
 }
 
 
-/* vijfde skyscraper */
-
+/****************/
+/*  SKYSCRAPER5 */
+/****************/
 .skyscraper5 {
     background-color: var(--donker-zwart);
     width: 94px;
@@ -165,8 +187,9 @@ button{
     right: 10px;
 }
 
-/* zesde skyscraper */
-
+/****************/
+/*  SKYSCRAPER6 */
+/****************/
 .skyscraper6 {
     background-color: var(--donker-zwart);
     width: 140px;
@@ -182,8 +205,9 @@ button{
     right: 12px;
 }
 
-/* zevende skyscraper */
-
+/****************/
+/*  SKYSCRAPER7 */
+/****************/
 .skyscraper7 {
     background-color: var(--donker-zwart);
     width: 94px;
@@ -199,8 +223,9 @@ button{
     right: 10px;
 }
 
-/* achtste skyscraper */
-
+/****************/
+/*  SKYSCRAPER8 */
+/****************/
 .skyscraper8 {
     background-color: var(--donker-zwart);
     width: 140px;
@@ -215,7 +240,9 @@ button{
     top: -8px;
 }
 
-/* dit is voor de lampjes */
+/****************/
+/*    LIGHTS   */
+/****************/
 
 .lamp {
     position: absolute;
@@ -283,32 +310,237 @@ button{
 }
 
 
-/* hier staat Spiderman! */
+/****************/
+/*     FIRE     */
+/****************/
 
-.spideybasic {
-    position: fixed;
-    z-index: 4;
-    left:-20vw;
-    width: 12vw;
-    transform-origin:70vw -100vh;
+
+.fire-flame {
+    width: 10%;
+    position: absolute;
+    left: 45%;
+    bottom: -13vh;
+    animation-name: fire;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
 }
 
 
-.spideybasic {
+@keyframes fire {
+    0% {
+        transform: scale(.3) rotate(-5deg);
+    }
+
+    10% {
+        transform: scale(.5) rotateY(40deg);
+    }
+
+    20% {
+        transform: scale(.4) rotate(0deg);
+    }
+
+    40% {
+        transform: scale(.6) rotate(10deg);
+    }
+
+    50% {
+        transform: scale(.5) rotateY(-40deg);
+    }
+
+    60% {
+        transform: scale(.4) rotate(-5deg);
+    }
+
+    70% {
+        transform: scale(.3) rotateY(40deg);
+    }
+
+    80% {
+        transform: scale(.5) rotate(10deg);
+    }
+
+    100% {
+        transform: scale(.6) rotate(-10deg);
+    }
+}
+
+
+/****************/
+/*     TAXI    */
+/****************/
+.taxi{
+    position: absolute;
+    z-index: 5;
+    width:8%;
+    bottom: -3vw;
+}
+
+.taxi{
+    animation-name: driving;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+
+@keyframes driving {
+  0% {
+    transform: translateX(0%);
+  }
+
+     100% {
+    transform: translateX(100vw);
+  }
+}
+
+/********************************************************************/
+/*                       SPIDERMAN                                  */
+/********************************************************************/
+.spidey5{
+    position: fixed;
+    z-index: 4;
+    left:10vw;
+    width: 16vw;
+    top:-35vw;
+
+}
+
+.spidey1, .spidey2, .spidey3, .spidey4, .spidey6, .spidey7{
+    position: fixed;
+    z-index: 10;
+    left:44vw;
+    top:20vh;
+    width: 12vw;
+    transform-origin:0 -100vh;
+    transform:rotate(60deg)
+
+}
+
+.spidey8 {
+    position: fixed;
+    z-index: 4;
+    right: 5vw;
+    bottom: 100vh;
+}
+
+.spidey1 img {
+    width:100%;
+    height:auto;
+}
+
+
+/* draadje */
+
+.spidey1::after {
+    content:"";
+    position:absolute;
+    bottom:40%;
+    left:85%;
+    width:5px;
+    height:100em;
+    background-color: black;
+    z-index: 0;
+}
+
+/********************************************************************/
+/*                            WEB                                  */
+/********************************************************************/
+
+
+
+/********************************************************************/
+/*                       ANIMATION SWING                            */
+/********************************************************************/
+
+.slinger {
   animation-name: slinger;
-  animation-duration: 13s;
+  animation-duration:10s;
 }
 
 @keyframes slinger {
   0% {
-    transform: rotate(0deg);
+    transform: rotate(60deg);
   }
 
   100% {
-    transform: rotate(-360deg);
+    transform: rotate(-60deg);
+  }
+}
+
+
+/********************************************************************/
+/*                        ANIMATION DANGLE                           */
+/********************************************************************/
+.dangle {
+    animation-name: down, dangle, down;
+    animation-duration: 3s, 1s, 3s;
+    animation-delay: 0s, 3s, 8s;
+    animation-iteration-count: 1, 5, 1;
+    animation-direction: normal, normal, reverse;
+    animation-timing-function: ease-out, ease-in-out, ease-in;
+}
+
+
+@keyframes down {
+    0% {
+        transform: translateY(0vh);
+    }
+
+    100% {
+        transform: translateY(65vh);
+    }
+}
+
+
+@keyframes dangle {
+    0% {
+        animation-timing-function: ease-out;
+        transform-origin: center -65vh;
+        transform: translateY(65vh) rotate(0deg);
+
+    }
+
+    25% {
+        animation-timing-function: ease-in-out;
+        transform-origin: center -65vh;
+        transform: translateY(65vh) rotate(10deg);
+
+    }
+
+    75% {
+        animation-timing-function: ease-in;
+        transform-origin: center -65vh;
+        transform: translateY(65vh) rotate(-10deg);
+
+    }
+
+    100% {
+
+        transform-origin: center -65vh;
+        transform: translateY(65vh) rotate(0deg);
+    }
+}
+
+/********************************************************************/
+/*                      ANIMATION DROP DOWN                         */
+/********************************************************************/
+
+
+.lastone {
+  animation-name: lastonenoa;
+  animation-duration: 5s;
+}
+
+@keyframes lastonenoa  {
+  0% {
+    transform:translateY(0vh);
+  }
+
+  80%{
+    transform:translateY(70vh);
   }
 
 }
+
 
 
 
