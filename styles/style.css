@@ -3,8 +3,8 @@
 /********************************************************************/
 /*                       BASICS                                      */
 /********************************************************************/
-*
-{ box-sizing: border-box;
+* {
+    box-sizing: border-box;
 }
 
 *:before,
@@ -20,56 +20,57 @@ body {
     margin: 0;
 }
 
-body{
-    background-image: url('../images/background.png');
+body {
+    background-image: url('../images/backgroundv2.png');
     background-repeat: no-repeat;
-    background-size: 100%;
-    position: relative;
-
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
 }
 
-button:not([disabled]) {
-    cursor: pointer;
+@font-face {
+  font-family: 'comic1';
+  src: url('../font/heroesassembleacadital-webfont.woff2') format('woff2'),
+       url('heroesassembleacadital-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
 }
 
-/****************/
-/*  BASICS2.0   */
-/****************/
+@font-face {
+  font-family: 'comic2';
+  src: url('../font/heroesassembleboldexpand2-webfont.woff2') format('woff2'),
+       url('heroesassembleboldexpand2-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
 
 
 h1 {
     color: #FBEED5;
-    z-index: 2;
-    position: absolute;
+    position: fixed;
     margin-left: auto;
     margin-right: auto;
-    left: 0;
-    right: 0;
     text-align: center;
-    top:150px;
-    font-family: 'CustomFont',
-    Arial,
-    sans-serif;
-    font-weight:normal;
-    font-style:normal;
+    top: 6em;
+    font-size: 17.5em;
+    left:0.4em;
+    top:-0.3em;
+    font-weight: normal;
+    font-style: normal;
+    font-family:'comic1',
+    Fantasy;
 }
 
-p{
-    position: relative;
-    z-index:1;
-    bottom: -300px;
-    color: #FBEED5;
-}
 
-/****************/
-/*    COLORS    */
-/****************/
+/********************************************************************/
+/*                             KLEUREN                       */
+/********************************************************************/
 
 :root {
     --licht-blauw: #489DCB;
     --donker-blauw: #1E415E;
     --lichter-zwart: #291C27;
-    --donker-zwart: #272727;
+    --donker-zwart: #1A0C1B;
     --licht-beige: #FBEED5;
     --donker-beige: #C6B8A7;
     --licht-rood: #C0283E;
@@ -79,11 +80,11 @@ p{
 /********************************************************************/
 /*                       CITY                                       */
 /********************************************************************/
-.skyscrapers{
-    position: absolute;
-    bottom: -60px;
-    left: -26px;
-    width: 100%;
+.skyscrapers {
+    position: fixed;
+    bottom: 8%;
+    left: 4.5em;
+    width: 65%;
     height: auto;
     display: flex;
     align-items: flex-end;
@@ -99,320 +100,440 @@ li {
 }
 
 /* Alle skyscrapers zijn knoppen */
-button{
-    background-color:rgba(0,0,0,0.0);
+
+button {
+    background-color: rgba(0, 0, 0, 0.0);
     border: none;
     padding-left: 1vw;
     color: var(--donker-beige);
-    width:100%;
-    background-image: url('../images/defaultstate.png');
+    width: 100%;
+    font-family: 'comic2', Fantasy;
+    bottom: 0em;
+
 }
 
-button:focus {
- background-image: url('../images/focusstate.png');
-}
-
-/****************/
-/*  SKYSCRAPER1 */
-/****************/
+/********************************************************************/
+/*                             SKYSCRAPER 1                       */
+/********************************************************************/
 .skyscraper1 {
-    height: 350px;
+    height: 21.8em;
     position: relative;
-    width:140px;
+    width: 9em;
     background-color: var(--donker-zwart);
 }
 
-/****************/
-/*  SKYSCRAPER2 */
-/****************/
+#btn1 {
+    background-image: url('../images/defaultstate1.png');
+    background-size: 9em;
+    background-repeat: no-repeat;
+}
+
+#btn1:focus {
+    background-image: url('../images/focusstate1.png');
+    background-size: 9em;
+    background-repeat: no-repeat;
+}
+
+/********************************************************************/
+/*                             SKYSCRAPER 2                       */
+/********************************************************************/
 .skyscraper2 {
     background-color: var(--donker-zwart);
-    width: 100px;
-    height: 450px;
+    width: 6.2em;
+    height: 28em;
     position: relative;
 }
 
 .skyscraper2:before {
-    width: 4px;
-    height: 48px;
+    width: 0.2em;
+    height: 3em;
     background-color: var(--donker-zwart);
-    top: -48px;
-    left: 15px;
+    top: -3em;
+    left: 0.9em;
 }
 
+#btn2 {
+    background-image: url('../images/defaultstate2.png');
+    background-size: 6.2em;
+    background-repeat: no-repeat;
+}
 
-/****************/
-/*  SKYSCRAPER3 */
-/****************/
+#btn2:focus {
+    background-image: url('../images/focusstate2.png');
+    background-size: 6.2em;
+    background-repeat: no-repeat;
+}
+
+/********************************************************************/
+/*                             SKYSCRAPER 3                       */
+/********************************************************************/
 .skyscraper3 {
     background-color: var(--donker-zwart);
-    width: 140px;
-    height: 480px;
+    width: 8.7em;
+    height: 30em;
     position: relative;
 }
 
 .skyscraper3:before {
-    width: 16px;
-    height: 8px;
+    width: 1em;
+    height: 0.5em;
     background-color: var(--donker-zwart);
-    top: -8px;
+    top: -0.5em;
 }
 
-/****************/
-/*  SKYSCRAPER4 */
-/****************/
+#btn3 {
+    background-image: url('../images/defaultstate3.png');
+    background-size: 8.7em;
+    background-repeat: no-repeat;
+}
+
+#btn3:focus {
+    background-image: url('../images/focusstate3.png');
+    background-size: 8.7em;
+    background-repeat: no-repeat;
+}
+
+/********************************************************************/
+/*                             SKYSCRAPER 4                       */
+/********************************************************************/
 .skyscraper4 {
     background-color: var(--donker-zwart);
-    width: 94px;
-    height: 350px;
+    width: 5.8em;
+    height: 21.8em;
     position: relative;
 }
 
+#btn4 {
+    background-image: url('../images/defaultstate4.png');
+    background-size: 5.8em;
+    background-repeat: no-repeat;
+}
 
-/****************/
-/*  SKYSCRAPER5 */
-/****************/
+#btn4:focus {
+    background-image: url('../images/focusstate4.png');
+    background-size: 5.8em;
+    background-repeat: no-repeat;
+}
+
+/********************************************************************/
+/*                             SKYSCRAPER 5                       */
+/********************************************************************/
 .skyscraper5 {
     background-color: var(--donker-zwart);
-    width: 94px;
-    height: 422px;
+    width: 5.8em;
+    height: 26em;
     position: relative;
 }
 
 .skyscraper5:before {
-    width: 12px;
-    height: 4px;
+    width: 0.7em;
+    height: 0.25em;
     background-color: var(--donker-zwart);
-    top: -4px;
-    right: 10px;
+    top: -0.25em;
+    right: 0.6em;
 }
 
-/****************/
-/*  SKYSCRAPER6 */
-/****************/
+#btn5 {
+    background-image: url('../images/defaultstate4.png');
+    background-size: 5.8em;
+    background-repeat: no-repeat;
+}
+
+#btn5:focus {
+    background-image: url('../images/focusstate4.png');
+    background-size: 5.8em;
+    background-repeat: no-repeat;
+}
+
+/********************************************************************/
+/*                             SKYSCRAPER 6                       */
+/********************************************************************/
 .skyscraper6 {
     background-color: var(--donker-zwart);
-    width: 140px;
-    height: 378px;
+    width: 8.7em;
+    height: 23.6em;
     position: relative;
 }
 
 .skyscraper6:before {
-    width: 10px;
-    height: 22px;
-    background-color:var(--donker-zwart);
-    top: -16px;
-    right: 12px;
+    width: 0.6em;
+    height: 1.3em;
+    background-color: var(--donker-zwart);
+    top: -1em;
+    right: 0.7em;
 }
 
-/****************/
-/*  SKYSCRAPER7 */
-/****************/
+#btn6 {
+    background-image: url('../images/defaultstate6.png');
+    background-size: 8.7em;
+    background-repeat: no-repeat;
+}
+
+#btn6:focus {
+    background-image: url('../images/focusstate6.png');
+    background-size: 8.7em;
+    background-repeat: no-repeat;
+}
+
+/********************************************************************/
+/*                             SKYSCRAPER 7                       */
+/********************************************************************/
 .skyscraper7 {
     background-color: var(--donker-zwart);
-    width: 94px;
-    height: 422px;
+    width: 5.8em;
+    height: 26.3em;
     position: relative;
 }
 
 .skyscraper7:before {
-    width: 12px;
-    height: 4px;
+    width: 0.7em;
+    height: 0.25em;
     background-color: var(--donker-zwart);
-    top: -4px;
-    right: 10px;
+    top: -0.25em;
+    right: 0.6em;
 }
 
-/****************/
-/*  SKYSCRAPER8 */
-/****************/
+#btn7 {
+    background-image: url('../images/defaulstate7.png');
+    background-size: 5.8em;
+    background-repeat: no-repeat;
+}
+
+#btn7:focus {
+    background-image: url('../images/focusstate7.png');
+    background-size: 5.8em;
+    background-repeat: no-repeat;
+}
+
+/********************************************************************/
+/*                             SKYSCRAPER 8                       */
+/********************************************************************/
+
 .skyscraper8 {
     background-color: var(--donker-zwart);
-    width: 140px;
-    height: 480px;
+    width: 8.7em;
+    height: 30em;
     position: relative;
 }
 
 .skyscraper8:before {
-    width: 16px;
-    height: 8px;
+    width: 1em;
+    height: 0.5em;
     background-color: var(--donker-zwart);
-    top: -8px;
+    top: -0.5em;
 }
 
-/****************/
-/*    LIGHTS   */
-/****************/
+#btn8 {
+    background-image: url('../images/defaultstate8.png');
+    background-size: 8.7em;
+    background-repeat: no-repeat;
+}
 
-.lamp {
-    position: absolute;
-    bottom: 20px;
-    width: 4px;
-    height: 122px;
+
+#btn8:focus {
+    background-image: url('../images/focusstate8.png');
+    background-size: 8.7em;
+    background-repeat: no-repeat;
+}
+
+
+
+/********************************************************************/
+/*                              LIGHTS                           */
+/********************************************************************/
+
+
+.light {
+    position: fixed;
+    width: 0.25em;
+    height: 7.6em;
     background-color: var(--licht-beige);
     cursor: pointer;
     z-index: 2;
-    transform: rotate(-0.6deg);
-    bottom: -40px;
 }
 
-.lamp:before {
-    width: 8px;
-    height: 25px;
+.light:before {
+    width: 0.5em;
+    height: 1.56em;
     background-color: var(--donker-beige);
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
+    border-top-left-radius: 0.5em;
+    border-top-right-radius: 0.5em;
     bottom: 0;
-    left: -2px;
+    left: -0.125em;
 }
 
-.lamp:after {
-    width: 13px;
-    height: 15px;
+.light:after {
+    width: 0.813em;
+    height: 0.938em;
     background-color: var(--donker-beige);
     border-radius: 50%;
-    left: -4px;
-    top: -10px;
+    left: -0.25em;
+    top: -0.625em;
 }
 
-.lamp-glow {
+.light-glow {
     position: absolute;
     z-index: 2;
-    width: 13px;
-    height: 15px;
-    top: -10px;
-    left: -4px;
+    width: 0.8em;
+    height: 0.9em;
+    top: -0.6em;
+    left: -0.25em;
     border-radius: 50%;
     background-color: #fff;
-    box-shadow: 0 0 65px 40px #fff;
+    box-shadow: 0 0 4em 2.5em #fff;
     opacity: 0;
 }
 
-/* dit snap ik nog niet, maar de tutorial was leuk */
-.lamp:hover > .lamp-glow {
+.light-glow:hover {
     opacity: 1;
 }
 
-#lamp1 {
-    left: 400px;
+#light1 {
+    left: 12.5em;
+    bottom: 5.2em;
 }
 
-#lamp2 {
-    left: 600px;
+#light2 {
+    left: 25em;
+    bottom: 5.3em;
 }
 
-#lamp3 {
-    left: 800px;
+#light3 {
+    left: 37.5em;
+    bottom: 5.4em;
 }
 
-#lamp4 {
-    left: 1000px;
+#light4 {
+    left: 50em;
+    bottom: 5.6em;
 }
 
 
-/****************/
-/*     FIRE     */
-/****************/
+/********************************************************************/
+/*                       FIRE BOOM BOOM                            */
+/********************************************************************/
 
 
-.fire-flame {
+.fire-flame,
+.boom {
     width: 10%;
-    position: absolute;
-    left: 45%;
-    bottom: -13vh;
+    position: fixed;
+    left: 35%;
+    bottom: 2em;
     animation-name: fire;
     animation-duration: 2s;
+    animation-delay: 5.5s;
     animation-iteration-count: infinite;
+    opacity: 0;
+    z-index: 8;
 }
 
 
 @keyframes fire {
     0% {
         transform: scale(.3) rotate(-5deg);
+        opacity: 1;
+
     }
 
     10% {
         transform: scale(.5) rotateY(40deg);
+        opacity: 1;
     }
 
     20% {
         transform: scale(.4) rotate(0deg);
+        opacity: 1;
     }
 
     40% {
         transform: scale(.6) rotate(10deg);
+        opacity: 1;
     }
 
     50% {
         transform: scale(.5) rotateY(-40deg);
+        opacity: 1;
     }
 
     60% {
         transform: scale(.4) rotate(-5deg);
+        opacity: 1;
     }
 
     70% {
         transform: scale(.3) rotateY(40deg);
+        opacity: 1;
     }
 
     80% {
         transform: scale(.5) rotate(10deg);
+        opacity: 1;
     }
 
     100% {
         transform: scale(.6) rotate(-10deg);
+        opacity: 1;
     }
 }
 
 
-/****************/
-/*     TAXI    */
-/****************/
-.taxi{
-    position: absolute;
+/********************************************************************/
+/*                       CARS                                       */
+/********************************************************************/
+.taxi {
+    position: fixed;
     z-index: 5;
-    width:8%;
-    bottom: -3vw;
+    width: 8%;
+    bottom: 5em;
+    animation-name: drivingtaxi;
+    animation-duration: 3s;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
 }
 
-.taxi{
-    animation-name: driving;
-    animation-duration: 5s;
-    animation-iteration-count: infinite;
+@keyframes drivingtaxi {
+    0% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(32vw);
+    }
 }
 
-
-@keyframes driving {
-  0% {
-    transform: translateX(0%);
-  }
-
-     100% {
-    transform: translateX(100vw);
-  }
+.car {
+    position: fixed;
+    z-index: 5;
+    width: 8%;
+    bottom: 5em;
+    right: 20em;
+    animation-name: drivingcar;
+    animation-duration: 3s;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
 }
+
+@keyframes drivingcar {
+    0% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(-31vw);
+    }
+}
+
 
 /********************************************************************/
 /*                       SPIDERMAN                                  */
 /********************************************************************/
-.spidey5{
+.spidey5 {
     position: fixed;
     z-index: 4;
-    left:10vw;
+    left: 10vw;
     width: 16vw;
-    top:-35vw;
-
-}
-
-.spidey1, .spidey2, .spidey3, .spidey4, .spidey6, .spidey7{
-    position: fixed;
-    z-index: 10;
-    left:44vw;
-    top:20vh;
-    width: 12vw;
-    transform-origin:0 -100vh;
-    transform:rotate(60deg)
-
+    top: -50vw;
 }
 
 .spidey8 {
@@ -422,48 +543,71 @@ button:focus {
     bottom: 100vh;
 }
 
-.spidey1 img {
-    width:100%;
-    height:auto;
+
+.spidey1,
+.spidey2,
+.spidey3,
+.spidey4,
+.spidey6,
+.spidey7 {
+    position: fixed;
+    left: 44vw;
+    top: 20vh;
+    width: 12vw;
+    transform-origin: 0 -100vh;
+    transform: rotate(60deg)
 }
 
-
-/* draadje */
-
-.spidey1::after {
-    content:"";
-    position:absolute;
-    bottom:40%;
-    left:85%;
-    width:5px;
-    height:100em;
-    background-color: black;
-    z-index: 0;
-}
 
 /********************************************************************/
 /*                            WEB                                  */
 /********************************************************************/
 
+.spidey1::after,
+.spidey2::after,
+.spidey3::after,
+.spidey4::after,
+.spidey6::after,
+.spidey7::after,
+.spidey8::after {
+    content: "";
+    position: absolute;
+    bottom: 40%;
+    left: 85%;
+    width: 0.3em;
+    height: 100em;
+    background-color: black;
+    z-index: 0;
+}
 
+.spidey5::after {
+    content: "";
+    position: absolute;
+    bottom: 37%;
+    left: 78%;
+    width: 0.3em;
+    height: 100em;
+    background-color: black;
+    z-index: 0;
+}
 
 /********************************************************************/
 /*                       ANIMATION SWING                            */
 /********************************************************************/
 
 .slinger {
-  animation-name: slinger;
-  animation-duration:10s;
+    animation-name: slinger;
+    animation-duration: 10s;
 }
 
 @keyframes slinger {
-  0% {
-    transform: rotate(60deg);
-  }
+    0% {
+        transform: rotate(60deg);
+    }
 
-  100% {
-    transform: rotate(-60deg);
-  }
+    100% {
+        transform: rotate(-60deg);
+    }
 }
 
 
@@ -486,7 +630,7 @@ button:focus {
     }
 
     100% {
-        transform: translateY(65vh);
+        transform: translateY(95vh);
     }
 }
 
@@ -495,28 +639,28 @@ button:focus {
     0% {
         animation-timing-function: ease-out;
         transform-origin: center -65vh;
-        transform: translateY(65vh) rotate(0deg);
+        transform: translateY(95vh) rotate(0deg);
 
     }
 
     25% {
         animation-timing-function: ease-in-out;
         transform-origin: center -65vh;
-        transform: translateY(65vh) rotate(10deg);
+        transform: translateY(95vh) rotate(10deg);
 
     }
 
     75% {
         animation-timing-function: ease-in;
         transform-origin: center -65vh;
-        transform: translateY(65vh) rotate(-10deg);
+        transform: translateY(95vh) rotate(-10deg);
 
     }
 
     100% {
 
         transform-origin: center -65vh;
-        transform: translateY(65vh) rotate(0deg);
+        transform: translateY(95vh) rotate(0deg);
     }
 }
 
@@ -526,22 +670,34 @@ button:focus {
 
 
 .lastone {
-  animation-name: lastonenoa;
-  animation-duration: 5s;
+    animation-name: lastone;
+    animation-duration: 5s;
 }
 
-@keyframes lastonenoa  {
-  0% {
-    transform:translateY(0vh);
-  }
+@keyframes lastone {
+    0% {
+        transform: translateY(0vh);
+    }
 
-  80%{
-    transform:translateY(70vh);
-  }
+    80% {
+        transform: translateY(70vh);
+    }
 
 }
 
 
+/********************************************************************/
+/*                      information text                        */
+/********************************************************************/
 
+#textbox1, #textbox2, #textbox3, #textbox4, #textbox5, #textbox6, #textbox7, #textbox8  {
+    position: fixed;
+    right: 6.5em;
+    top:12em;
+    width:15em;
+    line-height: 2em;
+    font-family: 'comic2', fantasy;
+    color: var(--donker-zwart);
+}
 
 
