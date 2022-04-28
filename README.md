@@ -111,7 +111,7 @@ Het werken met PX vind ik wel veel fijner dan EM, ik heb alles succesvol om kunn
 Ik had nog geen states bij de knoppen.
 
   #### oplossing 5 | States:
-  Ik heb gemakkelijk de states toe kunnen voegen, doormiddel van raampjes bij de wolkenkrabbers.
+  Ik heb gemakkelijk de states toe kunnen voegen, doormiddel van raampjes bij de wolkenkrabbers. Ik heb alleen bewust geen hover state toegevoegd, dit werd echt heel lelijk.
 
 </details>
 
