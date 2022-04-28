@@ -162,7 +162,7 @@ Dit heb ik kunnen veranderen in illustrator :).
 <img src="readme-images/illustratiestijl.png" width="375px" alt="illustratiestijl">
 <img src="readme-images/kleuren.png" width="375px" alt="illustratiestijl">
 <img src="readme-images/kostuumstekeningen.png" width="375px" alt="kostuums tekeningen">
-<img src="readme-images/illustraties" width="375px" alt="illustraties">
+<img src="readme-images/illustraties.png" width="375px" alt="illustraties">
 
 
 ## Reflectie
