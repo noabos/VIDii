@@ -1,6 +1,6 @@
 # Procesverslag
 
-## Ik :)
+## Noa Bos
 
 ### Ontwerper:
 Noa Bos, 500791864
@@ -171,19 +171,18 @@ Dit heb ik kunnen veranderen in illustrator :).
   <summary>Mijn eindresultaat & persoonlijke ontwikkeling</summary>
 
   ### Je uitkomst - karakteristiek screenshot(s):
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="final ontwerp">
-
+  <img src="readme-images/resultaat.png" width="375px" alt="final ontwerp">
 
   ### Dit ging goed/Heb ik geleerd: 
-  Korte omschrijving met plaatje(s)
+Ik ben blij hoe het in zijn geheel is uitgevallen. Er zijn vrij veel schoonheids foutjes en dingen die ik beter had gezien. Ik heb veel geleerd over keyframes en animaties, ik weet ik noe hoe ik customfonts moet gebruiken. Ik vond het een leuk vak en ook een hele leuke opdracht. Ik heb veel om hulp gevraagd en heb ook veel kunnen leren van anderen. Code blijft voor mij lastig, toch heb ik er wat meer plezier in gekregen. Ook vond ik het erg leuk om bezig te zijn met het maken van een ontwerp, en te zien hoe ik dit kon toepassen met de code die ik begreep. Het combineren van JS en HTML blijf ik lastig vinden.
 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="top">
-
+     ### Hier ben ik trots op:
+  <img src="readme-images/top.png" width="375px" alt="top">
+Voor veel animaties heb ik hulp gehad, zoals met de swing en de dangle. Het was ook heel lastig om hier een web aan te verbinden. Ook hiervoor heb ik hulp gevraagd. Het werken in de lessen en in de medialounge vond ik erg fijn, hierdoor maakte ik ook veel stappen vooruit. Elke les had ik een doel, wat ik aan het einde van de les gedaan wilde hebben. Dit is ook altijd goed gelukt. De animatie die we hier zien, is een animatie die ik zonder hulp heb kunnen maken, daar ben ik erg blij mee.
 
   ### Dit was lastig/Is niet gelukt:
-  Korte omschrijving met plaatje(s)
-
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="bummer">
+  <img src="readme-images/bummer.png" width="375px" alt="bummer">
+   De tekst verschijnt en verdwijnt weer na 6 of meer seconden. Alleen wanneer hij is verdwenen, verschijnt de tekst niet meer, van een andere spiderman. Hier ben ik lang mee bezig geweest, maar dit is een JS probleem, en JS blijf ik lastig vinden. Ook vind ik de tekst op de buttons niet goed leesbaar, ook dit had ik beter kunnen doen. Daarnaast ben ik nog niet helemaal tevreden over de vormgeving in zijn geheel, hier heb ik weinig tijd inzitten. Deze tijd wilde ik liever in het coderen stoppen. Ook ben ik niet blij met het responsive gedeelte, dit is iets wat me totaal niet lukte. 
 </details>
 
 
@@ -193,12 +192,14 @@ Dit heb ik kunnen veranderen in illustrator :).
 ## Bronnenlijst
 
 <details open>
-<summary>continu bijhouden terwijl je werkt</summary>
-
-Nb. Wees specifiek ('css-tricks' als bron is bijv. niet specifiek genoeg).
-
-1. bron 1
-2. bron 2
-3. ...
+1. https://www.dafont.com/heroes-assemble.font 
+2. https://www.fontsquirrel.com/tools/webfont-generator 
+3. https://bobbyhadz.com/blog/javascript-hide-element-after-few-seconds 
+4. https://codepen.io/amlivgl/pen/mNYwyw 
+5. https://redstapler.co/pure-css-horizontal-scrolling-website-tutorial/
+6. https://stackoverflow.com/questions/22331008/using-calc-to-transition-width-and-height-in-ie 
+7. https://stackoverflow.com/questions/9916354/is-it-valid-to-have-a-section-tag-inside-another-section-tag  
+8. https://forum.freecodecamp.org/t/trigger-animations-with-button-press/214733/4 
+9. Ik heb heel veel gehad aan de hulp van Sanne en Susan!
 
 </details>
